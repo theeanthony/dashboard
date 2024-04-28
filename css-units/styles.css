@@ -1,0 +1,76 @@
+
+
+.container {
+    display:inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(100px, auto); 
+
+    height: 100vh; 
+    width: 100vw;
+    background-color: lightblue; 
+    grid-template-areas: 
+    "main-panel main-panel main-panel main-panel main-panel sidebar-panel sidebar-panel"
+    "main-panel main-panel main-panel main-panel main-panel sidebar-panel sidebar-panel"
+    "main-panel main-panel main-panel main-panel main-panel sidebar-panel sidebar-panel"
+    "main-panel main-panel main-panel main-panel main-panel sidebar-panel sidebar-panel"
+    "main-panel main-panel main-panel main-panel main-panel sidebar-panel sidebar-panel";
+
+}
+.panel{
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+}
+#top-panel{
+    grid-area: top-panel;
+    background-color: brown;
+}
+#left-panel{
+    grid-area: left-panel;
+    background-color: chartreuse;
+}
+#main-panel{
+    grid-area: main-panel;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+}
+
+.projects-list{
+    flex-wrap: wrap;
+    overflow-y: auto;
+    grid-column: 1 / 2; 
+    background-color: white;
+
+}
+
+.projects-child {
+    display: grid;
+    grid-template-columns: repeat(2, 15rem);
+    gap: 4rem 15rem;
+    padding: 3rem;
+
+  }
+  .projects-child > div {
+    height: 20rem;
+    width:25rem;
+    background: darkred;
+
+  }
+  #sidebar-panel {
+    grid-area: sidebar-panel;
+
+    background-color: blueviolet;
+    padding-top: 20px;
+
+  }
+
+  #profile-pic{
+    height:20rem;
+    width: 20rem;
+    border: 5px solid black; /* Set border to solid black */
+    border-radius: 10px; /* Set border radius for rounded corners */
+
+  }
+ 
+   
